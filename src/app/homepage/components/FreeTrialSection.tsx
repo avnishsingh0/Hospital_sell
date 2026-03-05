@@ -109,7 +109,7 @@ export default function FreeTrialSection() {
               <div className="mt-6 p-4 bg-[#D4F268]/15 border border-[#D4F268]/30 rounded-2xl flex items-center gap-3">
                 <span className="text-xl flex-shrink-0">⏰</span>
                 <p className="text-sm text-white/90 font-medium">
-                  <span className="text-[#D4F268] font-bold">Limited Offer:</span> पहले 100 hospitals को 30 दिन free + 1 month extra
+                  <span className="text-[#D4F268] font-bold">Limited Offer:</span> पहले 100 hospitals को 30 दिन free 
                 </p>
               </div>
             </div>

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import TrustSection from "./components/TrustSection";
 import ProblemSection from "./components/ProblemSection";
 import SolutionSection from "./components/SolutionSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import FeaturesSection from "./components/FeaturesSection";
+import BenefitsSection from "./components/BenefitsSection";
 import FreeTrialSection from "./components/FreeTrialSection";
 import PricingSection from "./components/PricingSection";
+import WhyPricingSection from "./components/WhyPricingSection";
 import WhyUsSection from "./components/WhyUsSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
@@ -41,12 +44,15 @@ export default function HomepagePage() {
       <Navbar />
       <main>
         <HeroSection />
+        <TrustSection />
         <ProblemSection />
         <SolutionSection />
         <HowItWorksSection />
         <FeaturesSection />
+        <BenefitsSection />
         <FreeTrialSection />
         <PricingSection />
+        <WhyPricingSection />
         <WhyUsSection />
         <FAQSection />
         <FinalCTASection />

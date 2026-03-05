@@ -7,10 +7,10 @@ const steps = [
     number: "01",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
     title: "Hospital Register करें",
@@ -26,10 +26,10 @@ const steps = [
     number: "02",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7"/>
-        <rect x="14" y="3" width="7" height="7"/>
-        <rect x="3" y="14" width="7" height="7"/>
-        <path d="M14 14h3v3h-3zM17 17h3v3h-3z"/>
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+        <path d="M14 14h3v3h-3zM17 17h3v3h-3z" />
       </svg>
     ),
     title: "QR Code लगाएं",
@@ -45,7 +45,7 @@ const steps = [
     number: "03",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
     title: "Live Dashboard देखें",
@@ -61,8 +61,8 @@ const steps = [
     number: "04",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
-        <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
+        <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
       </svg>
     ),
     title: "Grow करें & App लें",
@@ -103,8 +103,8 @@ export default function HowItWorksSection() {
         <div className="text-center mb-16">
           <div className="reveal hidden-reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/8 border border-primary/20 mb-6">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" strokeWidth="2.5" strokeLinecap="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
             <span className="text-xs font-semibold text-primary">Simple 4-Step Process</span>
           </div>
@@ -119,9 +119,6 @@ export default function HowItWorksSection() {
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          {/* Connector lines (desktop) */}
-          <div className="hidden lg:block absolute top-[3.5rem] left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5 step-connector opacity-20 z-0 rounded-full" />
-
           {steps?.map((step, index) => (
             <div
               key={step?.number}
@@ -142,22 +139,12 @@ export default function HowItWorksSection() {
                 <h3 className="font-heading font-bold text-[#0F1923] text-lg mb-3 leading-tight">
                   {step?.title}
                 </h3>
-                <p className="text-sm text-[#4A5568] leading-relaxed mb-4">
+                <p className="text-sm text-[#4A5568] leading-relaxed">
                   {step?.description}
                 </p>
-                <span className={`inline-block text-xs font-bold px-3 py-1.5 rounded-full ${step?.tagColor}`}>
-                  {step?.tag}
-                </span>
               </div>
 
-              {/* Mobile connector */}
-              {index < steps?.length - 1 && (
-                <div className="lg:hidden flex justify-center mt-3 mb-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" strokeWidth="2" strokeLinecap="round" opacity="0.3">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
-                  </svg>
-                </div>
-              )}
+
             </div>
           ))}
         </div>
